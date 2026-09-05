@@ -1,0 +1,12 @@
+# Backend
+PORT=4000
+DATABASE_PATH=./data/meridian.db
+FRONTEND_URL=http://localhost:5173
+NODE_ENV=development
+
+# Optional: Twelve Data API key enables live market-price WebSocket streaming.
+# Leave blank to use the built-in simulator.
+TWELVE_DATA_API_KEY=
+
+# Frontend (optional in local dev because Vite proxies to :4000)
+VITE_API_URL=

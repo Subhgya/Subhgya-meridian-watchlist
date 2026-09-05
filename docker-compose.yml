@@ -1,0 +1,25 @@
+services:
+  backend:
+    build: ./backend
+    environment:
+      PORT: 4000
+      DATABASE_PATH: /app/data/meridian.db
+      FRONTEND_URL: http://localhost:8080
+      NODE_ENV: production
+    ports:
+      - "4000:4000"
+    volumes:
+      - meridian-data:/app/data
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_URL: http://localhost:4000
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+
+volumes:
+  meridian-data:
