@@ -2,8 +2,6 @@
 
 Meridian is a full-stack market observability and **paper-trading** application. It combines a React dashboard, Node/Express APIs, SQLite persistence, WebSockets, meaningful-change detection, optional live market prices, and a virtual trading account.
 
-## What makes it a strong placement project
-
 - Real-time event-driven UI using WebSockets
 - REST API + persistent SQLite state
 - Live market-data adapter with safe simulator fallback
